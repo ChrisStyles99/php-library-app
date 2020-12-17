@@ -9,10 +9,11 @@
   --fourth-color: #3b50b2;
   --text-color: #000;
   --dark-text-color: #fff;
+  --background-color: #F6F9FC;
 }
 
 body {
-  background-color: #F6F9FC;
+  background-color: var(--background-color);
 }
 
 .navbar {
@@ -204,7 +205,7 @@ body {
   height: 75%;
   position: relative;
   top: 10%;
-  background-color:  #F6F9FC;
+  background-color:  var(--background-color);
   border-radius: 24px;
   box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.4);
   display: grid;
@@ -240,7 +241,7 @@ body {
   outline: none;
   border: none;
   border-bottom: 1px solid var(--third-color);
-  background-color: #F6F9FC;
+  background-color: var(--background-color);
 }
 
 .login .login-card .login-form form button {
@@ -291,7 +292,7 @@ body {
 }
 
 .profile .information {
-  background-color: #F6F9FC;
+  background-color: var(--background-color);
   width: 50%;
   margin: auto;
   margin-top: 50px;
@@ -326,7 +327,7 @@ body {
 .profile .my-books {
   margin-top: 40px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
-  background-color: #F6F9FC;
+  background-color: var(--background-color);
   border-radius: 12px;
 }
 
@@ -352,9 +353,9 @@ body {
   display: grid;
   grid-template-columns: 70% 30%;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
-  background-color: #F6F9FC;
+  background-color: var(--background-color);
   border-radius: 12px;
-  max-height: 150px;
+  /* max-height: 150px; */
   overflow: hidden;
 }
 
@@ -396,6 +397,7 @@ body {
 
 .book-card .book-card-img img {
   transform: skew(20deg);
+  width: 100%;
   object-fit: cover;
 }
 
@@ -404,7 +406,7 @@ body {
 }
 
 .single-book-card {
-  background-color: #F6F9FC;
+  background-color: var(--background-color);
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
   width: 80%;
   margin: auto;
@@ -449,6 +451,28 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 0 12px 12px 0;
+}
+
+.reserved-message {
+  background-color: var(--background-color);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.book-lended-error {
+  color: #c23232;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.book-error {
+  background-color: #c23232;
+  color: var(--dark-text-color);
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .footer {

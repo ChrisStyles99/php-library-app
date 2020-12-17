@@ -7,12 +7,10 @@ include('./includes/header.php');
 <div class="container">
   <div class="index-page">
     <div class="index-text">
-      <h1>Welcome to <span>Library</span>,
-        <?php if ($_SESSION['name']) : ?>
-          <?php echo $_SESSION['name'] ?>
-        <?php endif; ?></h1>
+      <h1>Welcome to <span>Library</span><?php if (isset($_SESSION['name'])) : ?>, <?php echo $_SESSION['name'] ?>
+      <?php endif; ?></h1>
       <p>The best option for lending books and get your read done!</p>
-      <?php if (!$_SESSION['name']) : ?>
+      <?php if (!isset($_SESSION['name'])) : ?>
         <button>Start now!</button>
       <?php endif; ?>
     </div>
@@ -57,7 +55,7 @@ include('./includes/header.php');
       </div>
     </div>
   </div>
-  <?php if (!$_SESSION['name']) : ?>
+  <?php if (!isset($_SESSION['name'])) : ?>
     <div class="index-start-now">
       <h1>Do you like it? Start now!</h1>
       <a href="register.php">Create an account</a>

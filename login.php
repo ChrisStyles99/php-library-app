@@ -36,6 +36,12 @@ if (isset($_POST['submit'])) {
 
 <?php include('./includes/header.php'); ?>
 
+<?php 
+  if(isset($_SESSION['name'])) {
+    header('Location: profile.php');
+  }
+?>
+
 <div class="container login">
   <div class="user-error-msg">
     <?php echo $loginError; ?>

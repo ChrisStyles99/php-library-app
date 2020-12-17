@@ -20,7 +20,7 @@
   <nav class="navbar">
     <h1><a href="index.php">Library</a></h1>
     <ul class="nav-list">
-      <?php if($_SESSION['name']): ?>
+      <?php if(isset($_SESSION['name'])): ?>
         <li class="nav-item"><a href="books.php">Books</a></li>
         <li class="nav-item"><a href="profile.php">Profile</a></li>
         <li class="nav-item"><a href="logout.php">Logout</a></li>
