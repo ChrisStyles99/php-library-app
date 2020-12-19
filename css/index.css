@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Padauk', sans-serif;
   --primary-color: #225763;
   --secondary-color: #41d8bf;
   --third-color: #2f89b3;
@@ -14,6 +13,7 @@
 
 body {
   background-color: var(--background-color);
+  font-family: 'Padauk', sans-serif;
 }
 
 .navbar {
@@ -23,6 +23,7 @@ body {
   justify-content: space-between;
   align-items: center;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+  height: 60px;
 }
 
 .navbar h1 {
@@ -56,6 +57,12 @@ body {
 
 .navbar .nav-list .nav-item:hover {
   background-color: var(--secondary-color);
+}
+
+.navbar i {
+  margin-right: 10px;
+  font-size: 2rem;
+  display: none;
 }
 
 .wave-svg {
@@ -454,9 +461,10 @@ body {
 }
 
 .reserved-message {
-  background-color: var(--background-color);
+  background-color: #217c15;
   text-align: center;
   font-size: 2rem;
+  border-radius: 12px;
 }
 
 .book-lended-error {
@@ -484,4 +492,124 @@ body {
 
 .footer h1 {
   font-size: 4rem;
+}
+
+@media (max-width: 1025px) {
+  .book-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .profile .information {
+    width: 100%;
+  }
+
+  .book-card {
+    width: 100%;
+  }
+
+  .single-book-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .navbar .nav-list {
+    position: absolute;
+    display: block;
+    top: 60px;
+    background-color: var(--primary-color);
+    height: calc(100vh - 60px);
+    width: 50%;
+    z-index: 10;
+    transform: translateX(-200%);
+    transition: 0.3s ease all;
+  }
+
+  .navbar i {
+    display: block;
+  }
+
+  .navbar .nav-list .nav-item a {
+    font-size: 1.5rem;
+  }
+
+  .navbar .nav-list.active {
+    transform: translateX(0);
+  }
+
+  .container {
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .container .index-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr 1fr;
+  }
+
+  .container .index-page .index-text {
+    grid-row: 2 / 3;
+    text-align: center;
+  }
+
+  .container .index-page .index-img {
+    grid-row: 3 / 4;
+  }
+
+  .container .index-about {
+    overflow: hidden;
+  }
+
+  .container .index-about svg {
+    top: -20px;
+    right: -200px;
+  }
+
+  .index-offer .offer-cards {
+    flex-direction: column;
+  }
+
+  .login .login-card {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow: visible;
+  }
+
+  .login-card .login-img {
+    display: none;
+  }
+
+  .profile .information {
+    width: 100%;
+  }
+
+  .book-card {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .single-book-card {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  
+  .reserved-message {
+    font-size: 1.2rem;
+  }
+
+  .book-error {
+    font-size: 1.2rem;
+  }
+
+  .footer h1 {
+    font-size: 1.5rem;
+  }
 }
