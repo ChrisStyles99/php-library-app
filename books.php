@@ -19,7 +19,7 @@
         </div>
         <div class="book-card-desc">
           <!-- <p><?php echo substr($book['description'], 0, 75) ?></p> -->
-          <?php echo $book['description'] ?>
+          <p><?php echo $book['description'] ?></p>
         </div>
         <div class="book-card-footer">
           <a href="book.php?id=<?php echo $book['id'] ?>">Lend now!</a>

@@ -2,13 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   --primary-color: #225763;
-  --secondary-color: #41d8bf;
+  --secondary-color: #207c6d;
   --third-color: #2f89b3;
   --fourth-color: #3b50b2;
   --text-color: #000;
   --dark-text-color: #fff;
   --background-color: #F6F9FC;
+}
+
+body.dark-mode {
+  --text-color: #fff;
+  --dark-text-color: #000;
+  --background-color: #181818;
 }
 
 body {
@@ -32,7 +41,7 @@ body {
 }
 
 .navbar h1 a {
-  color: var(--dark-text-color);
+  color: #fff;
   text-decoration: none;
 }
 
@@ -51,7 +60,7 @@ body {
 }
 
 .navbar .nav-list .nav-item a {
-  color: var(--dark-text-color);
+  color: #fff;
   text-decoration: none;
 }
 
@@ -59,10 +68,15 @@ body {
   background-color: var(--secondary-color);
 }
 
-.navbar i {
+.navbar i.fas.fa-bars {
   margin-right: 10px;
   font-size: 2rem;
   display: none;
+}
+
+#theme-toggle {
+  cursor: pointer;
+  color: #fff;
 }
 
 .wave-svg {
@@ -94,6 +108,7 @@ body {
 
 .container .index-page .index-text h1 {
   font-size: 3rem;
+  color: var(--text-color);
 }
 
 .container .index-page .index-text h1 span {
@@ -102,6 +117,7 @@ body {
 
 .container .index-page .index-text p {
   font-size: 1.5rem;
+  color: var(--text-color);
 }
 
 .container .index-page .index-text button {
@@ -136,10 +152,12 @@ body {
   position: relative;
   text-align: center;
   height: 300px;
+  color: var(--text-color);
 }
 
 .container .index-about p {
   font-size: 1.2rem;
+  color: var(--text-color);
 }
 
 .container .index-about svg {
@@ -154,11 +172,13 @@ body {
 .container .index-offer h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: var(--text-color);
 }
 
 .container .index-offer .offer-cards {
   display: flex;
   justify-content: space-around;
+  color: var(--text-color);
 }
 
 .container .index-offer .offer-card {
@@ -186,6 +206,7 @@ body {
 .container .index-start-now {
   margin-top: 80px;
   text-align: center;
+  color: var(--text-color);
 }
 
 .container .index-start-now a {
@@ -195,7 +216,7 @@ body {
   font-size: 1.2rem;
   border-radius: 12px;
   cursor: pointer;
-  color: var(--text-color);
+  color: #000;
   text-decoration: none;
   transition: 0.3s ease all;
 }
@@ -249,6 +270,7 @@ body {
   border: none;
   border-bottom: 1px solid var(--third-color);
   background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .login .login-card .login-form form button {
@@ -265,6 +287,14 @@ body {
 .login .login-card .login-form form button:hover {
   background-color: var(--fourth-color);
   color: var(--dark-text-color);
+}
+
+.login .login-card .login-form p {
+  color: var(--text-color);
+}
+
+.login .login-card .login-form p a {
+  color: var(--text-color);
 }
 
 .login .login-card .login-img {
@@ -305,6 +335,7 @@ body {
   margin-top: 50px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 12px;
+  color: var(--text-color);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -336,6 +367,7 @@ body {
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
   background-color: var(--background-color);
   border-radius: 12px;
+  color: var(--text-color);
 }
 
 .books {
@@ -346,6 +378,7 @@ body {
   text-align: center;
   font-size: 3rem;
   margin-top: 50px;
+  color: var(--text-color);
 }
 
 .books-grid {
@@ -377,6 +410,7 @@ body {
 
 .book-card .book-card-information p {
   font-size: 1.3rem;
+  color: var(--text-color);
 }
 
 .book-card .book-card-information .book-card-footer {
@@ -384,7 +418,7 @@ body {
 }
 
 .book-card .book-card-information .book-card-footer a {
-  color: var(--primary-color);
+  color: #fff;
   text-decoration: none;
   background-color: var(--secondary-color);
   padding: 10px;
@@ -421,6 +455,7 @@ body {
   border-radius: 12px;
   display: grid;
   grid-template-columns: 80% 20%;
+  color: var(--text-color);
   gap: 10px;
 }
 
@@ -486,8 +521,8 @@ body {
 .footer {
   text-align: center;
   height: 100px;
-  background-color: #313131;
-  color: var(--dark-text-color);
+  background-color: #181818;
+  color: #fff;
 }
 
 .footer h1 {
@@ -529,7 +564,7 @@ body {
     transition: 0.3s ease all;
   }
 
-  .navbar i {
+  .navbar i.fas.fa-bars {
     display: block;
   }
 

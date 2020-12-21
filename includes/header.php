@@ -2,6 +2,12 @@
 
   session_start();
 
+  $theme = 'light-mode';
+
+  if(!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
+    $theme = 'dark-mode';
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +24,7 @@
   <script src="js/index.js" defer></script>
 </head>
 
-<body>
+<body class="<?php echo $theme ?>">
   <nav class="navbar">
     <h1><a href="index.php">Library</a></h1>
     <ul class="nav-list" id="nav-list">
@@ -29,6 +35,11 @@
       <?php else: ?>
         <li class="nav-item"><a href="login.php">Login</a></li>
         <li class="nav-item"><a href="register.php">Register</a></li>
+      <?php endif; ?>
+      <?php if($theme == 'light-mode'): ?>
+        <li class="nav-item"><i id="theme-toggle" class="fas fa-moon"></i></li>
+      <?php else: ?>
+        <li class="nav-item"><i id="theme-toggle" class="fas fa-sun"></i></li>
       <?php endif; ?>
     </ul>
     <i class="fas fa-bars" id="toggle-menu"></i>

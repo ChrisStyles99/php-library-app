@@ -23,7 +23,7 @@ include('./includes/header.php');
     <p>We are an option to lend the books that you want. It is pretty simple and quick.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis nisi repellat sint facere animi ratione adipisci hic veniam blanditiis?</p>
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#41D8BF" d="M59,-22.9C65.9,2.1,53.7,29.5,32.2,45.4C10.7,61.3,-20,65.5,-37.2,52.6C-54.4,39.8,-58.1,9.9,-49.6,-17.3C-41.2,-44.4,-20.6,-68.7,2.7,-69.6C26,-70.5,52.1,-47.9,59,-22.9Z" transform="translate(100 100)" />
+      <path fill="#207c6d" d="M59,-22.9C65.9,2.1,53.7,29.5,32.2,45.4C10.7,61.3,-20,65.5,-37.2,52.6C-54.4,39.8,-58.1,9.9,-49.6,-17.3C-41.2,-44.4,-20.6,-68.7,2.7,-69.6C26,-70.5,52.1,-47.9,59,-22.9Z" transform="translate(100 100)" />
     </svg>
   </div>
   <div class="index-offer">

@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
         </div>
         <button type="submit" name="submit">Register!</button>
       </form>
-      <p>Already have an account yet? <a href="login.php">Login now</a></p>
+      <p>Already have an account? <a href="login.php">Login now</a></p>
     </div>
   </div>
 </div>
